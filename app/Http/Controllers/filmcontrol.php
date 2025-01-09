@@ -6,7 +6,7 @@ use App\Models\Film;
 use App\Models\Genre;
 use Illuminate\Http\Request;
 
-class FilmController extends Controller
+class filmcontrol extends Controller
 {
     public function index()
     {
