@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\filmcontrol;
+use App\Http\Controllers\homecontrol;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/home', [homecontrol::class, 'home'])->name('home');
+Route::redirect('/', '/home');
+Route::resource('films', filmcontrol::class);
